@@ -21,17 +21,16 @@ body {
   @include selection;
 }
 
+.head-wrap {
+  background: lighten($color-body, 3%);
+}
+
 .main-nav {
-  position: absolute;
-  top: 40px;
-  left: 0;
-  right: 0;
-  margin: auto;
+  margin: 0 auto;
   max-width: 600px;
   width: 90%;
   height: 100px;
   z-index: 1;
-  background: lighten($color-body, 3%);
   padding: 0 20px;
 
   h1,
@@ -67,8 +66,9 @@ body {
     font-size: .7rem;
     letter-spacing: 3px;
     text-transform: uppercase;
-    padding-top: 32px;
-    color: darken($color-body, 4%);
+    padding-top: 35px;
+    font-weight: 600;
+    color: lighten($color-body, 40%);
     @media (max-width: $small) {
       margin-top: 0px;
     }
@@ -82,7 +82,7 @@ body {
 .main-wrapper {
   max-width: 600px;
   margin: auto;
-  margin-top: 150px;
+  margin-top: 30px;
 
   .post {
     display: block;
@@ -119,6 +119,10 @@ body {
         color: $color-light;
         @include transition;
       }
+
+      &:visited {
+        color: lighten($color-body, 60%);
+      }
     }
   }
 
@@ -128,7 +132,7 @@ body {
     font-size: .8rem;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: lighten($color-body, 10%);
+    color: $color-date;
   }
 
   .toTop {
@@ -141,6 +145,12 @@ body {
     color: $color-light;
     font-size: 1.4rem;
     cursor: pointer;
+    @include transition;
+
+    &:hover {
+      background: $color-accent;
+      @include transition;
+    }
     @media (max-width: $small) {
       right: 0;
       line-height: $line-height * 2;
@@ -166,7 +176,7 @@ body {
   @media (min-width: $small) and (max-width: $medium) {
     margin-bottom: 0px;
   }
-  padding: 50px;
+  padding: 50px 0;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 4px;

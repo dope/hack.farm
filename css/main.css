@@ -33,17 +33,16 @@ body ::selection {
   background: #f1d97c;
 }
 
+.head-wrap {
+  background: #32404e;
+}
+
 .main-nav {
-  position: absolute;
-  top: 40px;
-  left: 0;
-  right: 0;
-  margin: auto;
+  margin: 0 auto;
   max-width: 600px;
   width: 90%;
   height: 100px;
   z-index: 1;
-  background: #32404e;
   padding: 0 20px;
 }
 .main-nav h1,
@@ -85,8 +84,9 @@ body ::selection {
   font-size: .7rem;
   letter-spacing: 3px;
   text-transform: uppercase;
-  padding-top: 32px;
-  color: #242e39;
+  padding-top: 35px;
+  font-weight: 600;
+  color: #899eb4;
 }
 @media (max-width: 30em) {
   .main-nav h3 {
@@ -102,7 +102,7 @@ body ::selection {
 .main-wrapper {
   max-width: 600px;
   margin: auto;
-  margin-top: 150px;
+  margin-top: 30px;
 }
 .main-wrapper .post {
   display: block;
@@ -150,13 +150,16 @@ body ::selection {
   -o-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
+.main-wrapper .post a:visited {
+  color: #c7d1dc;
+}
 .main-wrapper .date {
   display: block;
   font-family: "Source Sans Pro";
   font-size: .8rem;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #405164;
+  color: #6f869e;
 }
 .main-wrapper .toTop {
   position: fixed;
@@ -168,6 +171,19 @@ body ::selection {
   color: white;
   font-size: 1.4rem;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.main-wrapper .toTop:hover {
+  background: #5bc5bf;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 @media (max-width: 30em) {
   .main-wrapper .toTop {
@@ -188,7 +204,7 @@ body ::selection {
   margin: 0px auto;
   margin-bottom: 50px;
   font-size: .6rem;
-  padding: 50px;
+  padding: 50px 0;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 4px;

@@ -24,9 +24,10 @@
 </head>
 <body>
 
-<div class="main-nav">
-  <h1>hack.farm</h1>
-  <h3>A Hacker News Alternative</h3>
-</div>
-
+<header class="head-wrap">
+  <div class="main-nav">
+    <h1>hack.farm</h1>
+    <h3>A Hacker News Alternative</h3>
+  </div>
+</header>
 <div class="main-wrapper">
