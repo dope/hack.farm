@@ -1,7 +1,7 @@
 <?php
   $rss = new DOMDocument();
   // pull in the feed
-  $rss->load('https://news.ycombinator.com/rss');
+  $rss->load('http://feeds.feedburner.com/newsyc100?fmt=xml');
   $feed = array();
   foreach ($rss->getElementsByTagName('item') as $node) {
 
@@ -13,7 +13,7 @@
       );
     array_push($feed, $item);
   }
-  $limit = 30;
+  $limit = 25;
   for($x=0;$x<$limit;$x++) {
 
     // variables for pulling th stuff
