@@ -102,7 +102,8 @@ body {
     }
 
     a {
-      color: lighten($color-body, 30%);
+      position: relative;
+      color: lighten($color-body, 60%);
       text-decoration: none;
       font-size: 1.6rem;
       @include transition;
@@ -116,12 +117,12 @@ body {
       }
 
       &:hover {
-        color: $color-light;
+        color: $color-accent;
         @include transition;
       }
 
       &:visited {
-        color: lighten($color-body, 60%);
+        color: lighten($color-body, 30%);
       }
     }
   }
@@ -182,6 +183,28 @@ body {
   letter-spacing: 4px;
   color: $color-light;
   font-family: $sans-font;
+
+  .social-area {
+    font-size: 1.5rem;
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: center;
+
+    a {
+      margin: 10px;
+      @include transition;
+
+      &:after {
+        height: 0;
+      }
+
+      &:hover {
+        color: $color-accent;
+        @include transition;
+      }
+    }
+  }
 
   a {
     position: relative;

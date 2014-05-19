@@ -123,7 +123,8 @@ body ::selection {
   }
 }
 .main-wrapper .post a {
-  color: #6a84a0;
+  position: relative;
+  color: #c7d1dc;
   text-decoration: none;
   font-size: 1.6rem;
   -webkit-transition: all 0.3s ease-in;
@@ -143,7 +144,7 @@ body ::selection {
   }
 }
 .main-wrapper .post a:hover {
-  color: white;
+  color: #5bc5bf;
   -webkit-transition: all 0.3s ease-in;
   -moz-transition: all 0.3s ease-in;
   -ms-transition: all 0.3s ease-in;
@@ -151,7 +152,7 @@ body ::selection {
   transition: all 0.3s ease-in;
 }
 .main-wrapper .post a:visited {
-  color: #c7d1dc;
+  color: #6a84a0;
 }
 .main-wrapper .date {
   display: block;
@@ -220,6 +221,32 @@ body ::selection {
   .main-footer {
     margin-bottom: 0px;
   }
+}
+.main-footer .social-area {
+  font-size: 1.5rem;
+  width: 200px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.main-footer .social-area a {
+  margin: 10px;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.main-footer .social-area a:after {
+  height: 0;
+}
+.main-footer .social-area a:hover {
+  color: #5bc5bf;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 .main-footer a {
   position: relative;
