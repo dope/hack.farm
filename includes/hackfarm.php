@@ -22,7 +22,7 @@
     $date = date('jS M Y', strtotime($feed[$x]['date']));
 
     // dump content
-    echo '<div class="post"><a href="'.$link.'" title="'.$title.'" target="_blank">'.$title.'</a>';
-    echo '<span class="date">Posted on '.$date.'</span></div>';
+    echo '<div class="post"><a href="'.$link.'" title="'.$title.'" target="_blank">'.$title.'</a>' . '<span class="read-btn">Read</span>';
+    echo '<div class="date">Posted on '.$date.'</div></div>';
   }
 ?>

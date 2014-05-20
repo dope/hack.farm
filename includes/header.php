@@ -24,7 +24,18 @@
 </head>
 <body>
 
+<nav class="nav">
+  <i class="fa fa-times nav-btn nav-away"></i>
+  <ul>
+    <h4>The Nav</h4>
+    <li><a href="http://github.com/dope/hack.farm">View Source</a></li>
+    <li><a href="https://news.ycombinator.com/">Hacker News</a></li>
+    <li><a href="http://twitter.com/joericho">Created by Joe</a></li>
+  </ul>
+</nav>
+
 <header class="head-wrap">
+  <i class="fa fa-bars nav-btn"></i>
   <div class="main-nav">
     <h1>hack.farm</h1>
     <h3>A Hacker News Alternative</h3>

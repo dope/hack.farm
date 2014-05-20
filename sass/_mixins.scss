@@ -16,7 +16,7 @@
   box-sizing: $type;
 }
 
-@mixin selection($color: #000, $background: #F1D97C) {
+@mixin selection($color: #000, $background: $color-accent) {
     @each $prefix in $prefixes {
         ::#{$prefix}selection {
             color: $color;
