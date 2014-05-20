@@ -30,4 +30,3 @@ $(document).ready(function() {
       $('html').toggleClass('html-slide');
     });
   });
-
