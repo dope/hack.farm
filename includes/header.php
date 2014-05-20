@@ -32,6 +32,7 @@
     <li><a href="https://news.ycombinator.com/">Hacker News</a></li>
     <li><a href="http://twitter.com/joericho">Created by Joe</a></li>
   </ul>
+  <a href="http://lifes.gd" class="light-btn">Life's Good</a>
 </nav>
 
 <header class="head-wrap">
