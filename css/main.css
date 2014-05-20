@@ -147,7 +147,9 @@ body ::selection {
 }
 @media (max-width: 30em) {
   .head-wrap .nav-btn {
+    top: 29px;
     right: 10px;
+    font-size: 1.5rem;
   }
 }
 .head-wrap .nav-btn:hover {

@@ -111,7 +111,9 @@ body {
     top: 23px;
     right: 20px;
     @media (max-width: $small) {
+      top: 29px;
       right: 10px;
+      font-size: 1.5rem;
     }
     font-size: 2rem;
     padding: 10px 15px;
