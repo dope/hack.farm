@@ -110,6 +110,9 @@ body {
     position: absolute;
     top: 23px;
     right: 20px;
+    @media (max-width: $small) {
+      right: 10px;
+    }
     font-size: 2rem;
     padding: 10px 15px;
     border-radius: 6px;

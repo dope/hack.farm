@@ -145,6 +145,11 @@ body ::selection {
   -o-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
+@media (max-width: 30em) {
+  .head-wrap .nav-btn {
+    right: 10px;
+  }
+}
 .head-wrap .nav-btn:hover {
   background: #2c3845;
   color: white;
