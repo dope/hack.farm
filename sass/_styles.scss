@@ -261,12 +261,12 @@ body {
       @include transition;
     }
     @media (max-width: $small) {
-      right: 0;
+      left: 0;
       line-height: $line-height * 2;
     }
 
     @media (min-width: $small) and (max-width: $medium) {
-      right: 0;
+      left: 0;
       line-height: $line-height * 2;
     }
   }

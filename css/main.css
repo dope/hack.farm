@@ -315,13 +315,13 @@ body ::selection {
 }
 @media (max-width: 30em) {
   .main-wrapper .toTop {
-    right: 0;
+    left: 0;
     line-height: 3em;
   }
 }
 @media (min-width: 30em) and (max-width: 50em) {
   .main-wrapper .toTop {
-    right: 0;
+    left: 0;
     line-height: 3em;
   }
 }
