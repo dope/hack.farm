@@ -7,12 +7,11 @@
 }
 
 html {
-  @include transition;
+  @include transition($objects: margin, $trans: 10s, $method: ease, $delay: .4s);
 }
 
 .html-slide {
   margin-right: 300px;
-  @include transition;
 }
 
 body {
@@ -34,6 +33,7 @@ body {
 
 .nav {
   position: fixed;
+  border: 1px solid transparent;
   z-index: 5;
   top: 0;
   right: -300px;
@@ -51,7 +51,7 @@ body {
   }
   height: 100%;
   background: darken($color-body, 10%);
-  @include transition;
+  @include transition($objects: margin, $trans: 10s, $method: ease, $delay: .4s);
 
   .nav-away {
     position: absolute;
@@ -62,6 +62,7 @@ body {
     color: $color-light;
     cursor: pointer;
     z-index: 500;
+    border: 1px solid transparent;
   }
 
   ul {
@@ -100,7 +101,6 @@ body {
 
 .slide-out {
   right: 0;
-  @include transition;
 }
 
 
@@ -250,7 +250,7 @@ body {
   .toTop {
     position: fixed;
     z-index: 2;
-    top: -100px;
+    top: -90px;
     left: 50px;
     background: darken($color-body, 3%);
     padding: 10px 20px;

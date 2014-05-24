@@ -1,10 +1,10 @@
 // transition that shit
-@mixin transition($objects: all, $trans: .3s, $method: ease-in) {
-  -webkit-transition: $objects $trans $method;
-  -moz-transition: $objects $trans $method;
-  -ms-transition: $objects $trans $method;
-  -o-transition: $objects $trans $method;
-  transition: $objects $trans $method;
+@mixin transition($objects: all, $trans: .3s, $method: ease-in, $delay: 1s) {
+  -webkit-transition: $objects $trans $method, $delay;
+  -moz-transition: $objects $trans $method, $delay;
+  -ms-transition: $objects $trans $method, $delay;
+  -o-transition: $objects $trans $method, $delay;
+  transition: $objects $trans $method, $delay;
 }
 
 // if you dont do this, then lol
