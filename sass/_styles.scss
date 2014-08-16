@@ -6,14 +6,6 @@
   @include box-sizing;
 }
 
-html {
-  @include transition($objects: margin, $trans: 10s, $method: ease, $delay: .4s);
-}
-
-.html-slide {
-  margin-right: 300px;
-}
-
 body {
   background: $color-body;
   font-family: $main-font;
