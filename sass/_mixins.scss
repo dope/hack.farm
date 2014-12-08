@@ -1,0 +1,26 @@
+// transition that shit
+@mixin transition($objects: all, $trans: .3s, $method: ease-in, $delay: 1s) {
+  -webkit-transition: $objects $trans $method, $delay;
+  -moz-transition: $objects $trans $method, $delay;
+  -ms-transition: $objects $trans $method, $delay;
+  -o-transition: $objects $trans $method, $delay;
+  transition: $objects $trans $method, $delay;
+}
+
+// if you dont do this, then lol
+@mixin box-sizing( $type: border-box ) {
+  -webkit-box-sizing: $type;
+  -moz-box-sizing: $type;
+  -o-box-sizing: $type;
+  -ms-box-sizing: $type;
+  box-sizing: $type;
+}
+
+@mixin selection($color: #000, $background: $color-accent) {
+    @each $prefix in $prefixes {
+        ::#{$prefix}selection {
+            color: $color;
+            background: $background;
+        }
+    }
+}

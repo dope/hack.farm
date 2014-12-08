@@ -1,0 +1,370 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+  @include box-sizing;
+}
+
+body {
+  background: $color-body;
+  font-family: $main-font;
+  font-size: $base-font;
+  line-height: $line-height * 1.7;
+
+  @media (max-width: $small) {
+    line-height: $line-height * 1.3;
+  }
+
+  @media (min-width: $small) and (max-width: $medium) {
+    line-height: $line-height * 1.3;
+  }
+
+  @include selection;
+}
+
+.nav {
+  position: fixed;
+  border: 1px solid transparent;
+  z-index: 5;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  text-align: center;
+  color: $color-light;
+  font-family: $sans-font;
+  @media (max-width: $small) {
+    right: -100%;
+    width: 100%;
+  }
+  @media (min-width: $small) and (max-width: $medium) {
+    right: -100%;
+    width: 100%;
+  }
+  height: 100%;
+  background: darken($color-body, 10%);
+  @include transition($objects: margin, $trans: 10s, $method: ease, $delay: .4s);
+
+  .nav-away {
+    position: absolute;
+    top: 23px;
+    right: 24px;
+    padding: 10px 15px;
+    font-size: 2em;
+    color: $color-light;
+    cursor: pointer;
+    z-index: 500;
+    border: 1px solid transparent;
+  }
+
+  ul {
+    padding:40px 0;
+
+    h4 {
+      position: relative;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 40px;
+
+      &:after {
+        position: absolute;
+        width: 50px;
+        height: 4px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: -10px;
+        background: $color-accent;
+        content: "";
+      }
+    }
+
+    li {
+      a {
+        color: $color-light;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.slide-out {
+  right: 0;
+}
+
+
+.head-wrap {
+  background: lighten($color-body, 3%);
+
+  .nav-btn {
+    position: absolute;
+    top: 23px;
+    right: 20px;
+    @media (max-width: $small) {
+      top: 29px;
+      right: 10px;
+      font-size: 1.5rem;
+    }
+    font-size: 2rem;
+    padding: 10px 15px;
+    border-radius: 6px;
+    color: $color-light;
+    cursor: pointer;
+    @include transition;
+
+    &:hover {
+      background: $color-body;
+      color: $color-light;
+      @include transition;
+    }
+  }
+}
+
+.main-nav {
+  margin: 0 auto;
+  max-width: 600px;
+  width: 90%;
+  height: 100px;
+  z-index: 1;
+  padding: 0 20px;
+
+  h1,
+  h3 {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 29px 0;
+    @media (max-width: $small) {
+      width: 100%;
+      padding: 0!important;
+    }
+
+    @media (min-width: $small) and (max-width: $medium) {
+      width: 100%;
+      padding: 0!important;
+    }
+  }
+
+  h1 {
+    width: 29%;
+    color: #fff;
+    @media (max-width: $small) {
+      padding-top: 25px!important;
+    }
+
+    @media (min-width: $small) and (max-width: $medium) {
+      padding-top: 25px!important;
+    }
+  }
+
+  h3 {
+    font-family: $sans-font;
+    font-size: .7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding-top: 35px;
+    font-weight: 600;
+    color: lighten($color-body, 40%);
+    @media (max-width: $small) {
+      margin-top: 0px;
+    }
+
+    @media (min-width: $small) and (max-width: $medium) {
+      margin-top: 0;
+    }
+  }
+}
+
+.main-wrapper {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 30px;
+
+  .post {
+    position: relative;
+    display: block;
+    padding: 40px 20px;
+    border-bottom: 2px dashed darken($color-body, 3%);
+
+    &:nth-child(even) {
+      background: darken($color-body, 1%);
+    }
+
+    @media (max-width: $small) {
+      padding: 20px;
+    }
+
+    @media (min-width: $small) and (max-width: $medium) {
+      padding: 20px;
+    }
+
+    a {
+      position: relative;
+      color: lighten($color-body, 60%);
+      text-decoration: none;
+      font-size: 1.6rem;
+      @include transition;
+
+      @media (max-width: $small) {
+        font-size: 1.5rem;
+      }
+
+      @media (min-width: $small) and (max-width: $medium) {
+        font-size: 1.5rem;
+      }
+
+      &:hover {
+        color: $color-accent;
+        @include transition;
+      }
+
+      &:visited {
+        color: lighten($color-body, 30%);
+
+        .read-btn {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .date {
+    display: block;
+    font-family: $sans-font;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: $color-date;
+  }
+
+  .toTop {
+    position: fixed;
+    z-index: 2;
+    top: -90px;
+    left: 50px;
+    background: darken($color-body, 3%);
+    padding: 10px 20px;
+    color: $color-light;
+    font-size: 1.4rem;
+    cursor: pointer;
+    @include transition;
+
+    &:hover {
+      background: $color-accent;
+      @include transition;
+    }
+    @media (max-width: $small) {
+      left: 0;
+      line-height: $line-height * 2;
+    }
+
+    @media (min-width: $small) and (max-width: $medium) {
+      left: 0;
+      line-height: $line-height * 2;
+    }
+  }
+}
+
+.main-footer {
+  max-width: 600px;
+  width: 90%;
+  margin: 0px auto;
+  margin-bottom: 50px;
+  font-size: .6rem;
+  @media (max-width: $small) {
+    margin-bottom: 0px;
+  }
+
+  @media (min-width: $small) and (max-width: $medium) {
+    margin-bottom: 0px;
+  }
+  padding: 50px 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: $color-light;
+  font-family: $sans-font;
+
+  .social-area {
+    font-size: 1.5rem;
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: center;
+
+    a {
+      margin: 10px;
+      @include transition;
+
+      &:after {
+        height: 0;
+      }
+
+      &:hover {
+        color: $color-accent;
+        @include transition;
+      }
+    }
+  }
+
+  a {
+    position: relative;
+    color: $color-light;
+    text-decoration: none;
+
+    &:after {
+      position: absolute;
+      bottom: -5px;
+      left: -5px;
+      right: 0;
+      margin: auto;
+      width: 99%;
+      height: 2px;
+      background: darken($color-accent, 10%);
+      content: "";
+    }
+
+  }
+}
+
+.read-btn {
+  position: relative;
+  top: -5px;
+  background: $color-accent;
+  font-family: $sans-font;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: darken($color-accent, 30%);
+  font-weight: bold;
+  font-size: .5rem;
+  padding: 4px 5px;
+  margin-left: 10px;
+  border-radius: 6px;
+  display: none;
+}
+
+.show-read-btn {
+  display: inline;
+}
+
+.light-btn {
+  width: 80%;
+  padding: 20px;
+  background: lighten($color-body, 10%);
+  border: 0;
+  border-radius: 6px;
+  font-size: .9rem;
+  cursor: pointer;
+  color: $color-light;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  @include transition;
+
+  &:hover {
+    background: darken($color-body, 1%);
+    @include transition;
+  }
+}
